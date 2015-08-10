@@ -15,6 +15,6 @@ dr <- read.csv(paste(loc, 'yelp_academic_dataset_review.csv', sep=""), sep=",")
 dr <- dr[dr$business_id %in% db$business_id, ]
 
 # Write subset data
-newLoc <- '/Users/josiahdavis/Documents/GitHub/Customer/'
-write.csv(db, paste(newLoc, 'yelp_business.csv', sep=""))
-write.csv(dr, paste(newLoc, 'yelp_review.csv', sep=""))
+newLoc <- '/Users/josiahdavis/Documents/GitHub/earl/'
+write.csv(db, paste(newLoc, 'yelp_business.csv', sep=""), row.names=FALSE)
+write.csv(dr, paste(newLoc, 'yelp_review.csv', sep=""), row.names=FALSE)

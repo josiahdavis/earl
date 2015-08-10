@@ -1,7 +1,7 @@
 # ANALYSIS OF YELP DATA
 
 # Read in data
-loc <- '/Users/josiahdavis/Documents/GitHub/Customer/'
+loc <- '/Users/josiahdavis/Documents/GitHub/earl/'
 db <- read.csv(paste(loc, 'yelp_business.csv', sep=""))
 dr <- read.csv(paste(loc, 'yelp_review.csv', sep=""))
 
@@ -58,7 +58,8 @@ row.names(words) <- 1:dim(dtm)[2]
 head(words[order(words$sentiment, decreasing = FALSE) & words$counts > 10,], 10)
 
 # Sanity checking
-words['iphone',]
+words[words$words == 'iphone',]
 colSums(as.matrix(dtm))['iphone']
 
-loc <- '/Users/josiahdavis/Documents/DraftBlog/yelp_dataset_challenge_academic_dataset/'
+# Write resulting file out to csv
+write.csv(words, paste(loc, 'words.csv', sep=""), row.names=FALSE)
