@@ -3,11 +3,13 @@
 library(syuzhet)
 
 
-# Read in and subset data
+# Read in, subset, and merge data
 loc <- '/Users/josiahdavis/Documents/GitHub/earl/'
+db <- read.csv(paste(loc, 'yelp_business.csv', sep=""))
+db <- db[,c("business_id","name", "state", "city")]
 dr <- read.csv(paste(loc, 'yelp_review.csv', sep=""))
-d <- dr[,c("text", "stars", "votes_cool", "votes_funny", "votes_useful")]
-
+dr <- dr[,c("text", "stars", "votes_cool", "votes_funny", "votes_useful", "business_id")]
+d <- merge(dr,db,by="business_id")
 
 # For each review, calculate various sentiment related metrics
 d$sentances <- unlist(lapply(d$text, function(x) length(get_sentences(as.character(x)))))
