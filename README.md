@@ -19,9 +19,12 @@
 * ["Secret” Recipe for Topic Modeling Themes"](http://www.matthewjockers.net/2013/04/12/secret-recipe-for-topic-modeling-themes/) by Matthew L. Jockers (April 2013)
 * [Finding scientific topics](http://psiexp.ss.uci.edu/research/papers/sciencetopics.pdf) by Steyvers and Griffiths (April 2004)
 * [LDAvis: A method for visualizing and interpreting topics](http://nlp.stanford.edu/events/illvi2014/papers/sievert-illvi2014.pdf) by Sievert and Shirley (2014)
+* [An introduction to topic modeling of early American sources](http://www.common-place.org/vol-06/no-02/tales/)
+> Remember the $10,000 Pyramid hosted by Dick Clark? It was a game show started in the 1970s in which minor celebrities shouted a series of words or phrases and their contestant partners tried to guess the category to which those words belonged. So "dog…parrot…cat…goldfish…pot-bellied pig" would be possible hints for the category "Animals you keep as pets!"
 
 ## Resources to Explore
 * **Paper:** [Personalizing Yelp Star Ratings: a Semantic Topic Modeling Approach](http://www.yelp.com/html/pdf/YelpDatasetChallengeWinner_PersonalizingRatings.pdf). Interesting because "that a reviewer would draw from a different set of words when writing about 5-star quality food and 1-star quality food"
+* **Article:** [Introduction to Latent Dirichlet Allocation](http://blog.echen.me/2011/08/22/introduction-to-latent-dirichlet-allocation/) by Edwin Chen.
 * **Paper:** [Inferring Business Similarity from Topic Modeling](http://cseweb.ucsd.edu/~jmcauley/cse190/reports/004.pdf) paper uses Latent Dirichlet Allocation and Jaccard Similarity applied to Yelp reviews
 * **Paper:** [Improving Restaurants by Extracting Subtopics from Yelp Reviews](http://www.yelp.com/html/pdf/YelpDatasetChallengeWinner_ImprovingRestaurants.pdf)
 * **Paper:** [Hidden Factors and Hidden Topics: Understanding Rating Dimensions with Review Text](http://cs.stanford.edu/people/jure/pubs/reviews-recsys13.pdf)
