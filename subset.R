@@ -5,8 +5,23 @@ loc <- '/Users/josiahdavis/Documents/DraftBlog/yelp_dataset_challenge_academic_d
 # Read in business attributes
 db <- read.csv(paste(loc, 'yelp_academic_dataset_business.csv', sep=""))
 
-# Subset to only include Verizon Wireless business information
-db <- db[grepl("Verizon Wireless", db$name),]
+# Which states are most representative?
+summary(db$state)
+
+# Which business categories are their? 
+#     Arts & Entertainment,Performing Arts
+#     Banks & Credit Unions,Financial Services
+#     Breakfast & Brunch,Restaurants
+#     Food,Coffee & Tea
+summary(db$categories)
+
+# How many businesses are labeled as various venus?
+summary(db[grepl("Financial Services", db$categories),]$name)
+summary(db[grepl("Coffee & Tea", db$categories),]$name)
+
+# Subset to only include business information for one of three banks
+db <- db[grepl("Bank of America", db$name) | grepl("Wells Fargo", db$name) | grepl("Chase Bank", db$name),]
+dim(db)
 
 # Read in review text
 dr <- read.csv(paste(loc, 'yelp_academic_dataset_review.csv', sep=""), sep=",")
