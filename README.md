@@ -20,6 +20,7 @@
 * [Finding scientific topics](http://psiexp.ss.uci.edu/research/papers/sciencetopics.pdf) by Steyvers and Griffiths (April 2004)
 * [LDAvis: A method for visualizing and interpreting topics](http://nlp.stanford.edu/events/illvi2014/papers/sievert-illvi2014.pdf) by Sievert and Shirley (2014)
 * [An introduction to topic modeling of early American sources](http://www.common-place.org/vol-06/no-02/tales/)
+
 > Remember the $10,000 Pyramid hosted by Dick Clark? It was a game show started in the 1970s in which minor celebrities shouted a series of words or phrases and their contestant partners tried to guess the category to which those words belonged. So "dog…parrot…cat…goldfish…pot-bellied pig" would be possible hints for the category "Animals you keep as pets!"
 
 ## Resources to Explore
