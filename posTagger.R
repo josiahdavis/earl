@@ -17,6 +17,7 @@ library(RTextTools)
 library(topicmodels)
 library(SnowballC)
 library(tm)
+library(reshape)
 
 # Load the Data
 loc <- '/Users/josiahdavis/Documents/GitHub/earl/'
@@ -108,6 +109,7 @@ freq[head(ord, 100)]
 
 # Subset to only include words appear at least a couple times
 dtmd <- dtmd[,freq > 5]
+dtmd <- dtmd[rowSums(dtmd) > 0,]
 
 # =====================================
 # Perform Latent 
@@ -115,7 +117,7 @@ dtmd <- dtmd[,freq > 5]
 # =====================================
 
 # Start out using small number of topics purely for interpretability
-lda <- LDA(dtmd, 5)
+lda <- LDA(dtmd, 6)
 
 # Top 10 terms for each topic
 terms <- terms(lda, 10)
@@ -137,3 +139,85 @@ json <- createJSON(phi = posterior(lda)$terms,
 
 # Launch the interactive visualization
 serVis(json)
+
+# =====================================
+# Calculate the saliency scores
+# This code copied from the LDAVis package
+# =====================================
+
+# THETA -- Probability Distribution of Topics across documents
+# For a given document, what % of the document is topic i?
+theta = lda@gamma
+head(theta)
+
+# Number of terms/words in each document
+doc.length = rowSums(dtmd)
+
+# PHI -- Probability Distribution of Words across Topics
+# For a given topic, what % of the topic is word j?
+phi <- posterior(lda)$terms
+head(phi)
+
+
+# compute counts of tokens across K topics (length-K vector):
+# (this determines the areas of the default topic circles when no term is 
+# highlighted)
+topic.frequency <- colSums(theta * doc.length)
+topic.proportion <- topic.frequency/sum(topic.frequency)
+
+# re-order the K topics in order of decreasing proportion:
+o <- order(topic.proportion, decreasing = TRUE)
+phi <- phi[o, ]
+theta <- theta[, o]
+topic.frequency <- topic.frequency[o]
+topic.proportion <- topic.proportion[o]
+
+
+# token counts for each term-topic combination (widths of red bars)
+term.topic.frequency <- phi * topic.frequency  
+
+# compute term frequencies as column sums of term.topic.frequency
+# we actually won't use the user-supplied term.frequency vector.
+# the term frequencies won't match the user-supplied frequencies exactly
+# this is a work-around to solve the bug described in Issue #32 on github:
+# https://github.com/cpsievert/LDAvis/issues/32
+term.frequency <- colSums(term.topic.frequency)
+
+# marginal distribution over terms (width of blue bars)
+term.proportion <- term.frequency/sum(term.frequency)
+
+# Most operations on phi after this point are across topics
+# R has better facilities for column-wise operations
+phi <- t(phi)
+
+# compute the distinctiveness and saliency of the terms:
+# this determines the R terms that are displayed when no topic is selected
+topic.given.term <- phi/rowSums(phi)  # (W x K)
+kernel <- topic.given.term * log(sweep(topic.given.term, MARGIN=2, 
+                                       topic.proportion, `/`))
+distinctiveness <- rowSums(kernel)
+saliency <- term.proportion * distinctiveness
+head(saliency)
+
+# Dataframe #1: Word Saliencies
+wordsSaliency <- data.frame(words = names(saliency), saliency = unname(saliency))
+
+# =====================================
+# Create a csv of the words, and key 
+# metrics associated with them
+# =====================================
+
+# Dataframe #2: distribution of words across topics
+wordsTopics <- as.data.frame(posterior(lda)$terms)
+wordsTopics$topics = 1:nrow(wordsTopics)
+wordsTopics <- melt(wordsTopics, id="topics")
+colnames(wordsTopics) <- c("topics", "words", "probability")
+
+# Dataframe #3: Calculate the word frequencies
+wordsFreq <- data.frame(words = names(colSums(dtmd)),
+                          frequency = unname(colSums(dtmd)))
+
+# Merge the dataframes together
+wordsTopics <- merge(wordsTopics, wordsFreq, on = "words", all = TRUE)
+wordsTopics <- merge(wordsTopics, wordsSaliency, on = "words", all = TRUE)
+write.csv(wordsTopics, paste(loc, 'wordsTopics.csv', sep=""), row.names=FALSE)
