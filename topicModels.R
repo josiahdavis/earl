@@ -9,8 +9,6 @@
 # Filter out non-noun words
 # =====================================
 
-
-
 # =====================================
 # Load packages 
 # and prepare data
@@ -76,7 +74,6 @@ dtmd <- as.matrix(dtm)
 dtmd <- dtmd[,top]
 dim(dtm)
 dim(dtmd)  # Reduce from 36xx to 5xx terms
-
 
 # =====================================
 # Perform Latent 

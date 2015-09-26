@@ -2,7 +2,6 @@
 # This script tokenizes each review, removes stopwords, identifies the most common words, and 
 # quantifies positivity and negativity associated with each word. The main packaged used thus far is tm.
 
-
 # Read in data
 loc <- '/Users/josiahdavis/Documents/GitHub/earl/'
 db <- read.csv(paste(loc, 'yelp_business.csv', sep=""))
