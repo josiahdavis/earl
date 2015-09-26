@@ -69,7 +69,7 @@ typeof(POSGetter(texts_annotated[[2]], c("fasdasd", "afasda")))
 nouns <- texts_annotated %>% lapply(POSGetter, parts = c("NN", "NNS", "NNP", "NNPS"))
 
 # Turn each character vector into a single string
-nounsS <- nouns %>% lapply(as.String)
+nouns <- nouns %>% lapply(as.String)
 
 # =====================================
 # Perform text mining 
@@ -77,19 +77,21 @@ nounsS <- nouns %>% lapply(as.String)
 # =====================================
 
 # Conver to dataframe
-d <- data.frame(reviews = as.character(nounsS))
+d <- data.frame(reviews = as.character(nouns))
 
 # Replace new line characters with spaces
 d$reviews <- gsub("\n", " ", d$reviews)
-head(d)
+
 # Convert the relevant data into a corpus object with the tm package
 d <- Corpus(VectorSource(d$reviews))
 
 # Convert everything to lower case
 d <- tm_map(d, content_transformer(tolower))
 
-# Remove stopwords (generic)
-d <- tm_map(d, removeWords, c(stopwords("english"), "\n"))
+# Remove stopwords
+stopwords <- c(stopwords("english"), "bank", "bofa", "boa", "wells", 
+               "fargo", "america", "chase", "thing")
+d <- tm_map(d, removeWords, stopwords)
 
 # Strip whitespace
 d <- tm_map(d, stripWhitespace)
@@ -99,25 +101,21 @@ dtm <- DocumentTermMatrix(d)
 dim(dtm)
 
 # Look up most frequent terms
-freq <- colSums(as.matrix(dtm))
-ord <- order(freq)
-freq[tail(ord, 50)]
-
-# Subset to only include words appearing at least 10 times
-top <- findFreqTerms(dtm, lowfreq=10)
 dtmd <- as.matrix(dtm)
-dtmd <- dtmd[,top]
-dim(dtm)
-dtmd <- dtmd[rowSums(dtmd) > 0,]
-dim(dtmd)
+freq <- colSums(dtmd)
+ord <- order(freq, decreasing = TRUE)
+freq[head(ord, 100)]
+
+# Subset to only include words appear at least a couple times
+dtmd <- dtmd[,freq > 5]
 
 # =====================================
 # Perform Latent 
 # Dirichlet Allocation 
 # =====================================
 
-# Start out using three topics (easier to intpret smaller number of topics)
-lda <- LDA(dtmd, 3)
+# Start out using small number of topics purely for interpretability
+lda <- LDA(dtmd, 5)
 
 # Top 10 terms for each topic
 terms <- terms(lda, 10)
