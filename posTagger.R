@@ -137,4 +137,5 @@ json <- createJSON(phi = posterior(lda)$terms,
                    vocab = colnames(dtmd),
                    term.frequency = colSums(dtmd))
 
+# Launch the interactive visualization
 serVis(json)
