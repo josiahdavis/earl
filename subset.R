@@ -17,7 +17,7 @@ summary(db[grepl("Financial Services", db$categories),]$name)
 summary(db[grepl("Coffee & Tea", db$categories),]$name)
 
 # Subset to only include business information for one of three banks
-db <- db[grepl("Bank of America", db$name) | grepl("Wells Fargo", db$name) | grepl("Chase Bank", db$name),]
+db <- db[(db$name == "Bank of America") | (db$name == "Chase Bank") | (db$name == "Wells Fargo Bank"),]
 dim(db)
 
 # Read in review text
