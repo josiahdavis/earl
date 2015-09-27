@@ -141,7 +141,7 @@ json <- createJSON(phi = posterior(lda)$terms,
 serVis(json)
 
 # =====================================
-# Calculate the saliency scores
+# Calculate the saliency and relevancy scores
 # This code copied from the LDAVis package
 # =====================================
 
@@ -202,22 +202,36 @@ head(saliency)
 # Dataframe #1: Word Saliencies
 wordsSaliency <- data.frame(words = names(saliency), saliency = unname(saliency))
 
+# Dataframe #2 and 3: Lift, Phi, and Relevance (NOT WORKING YET)
+lift <- phi/term.proportion
+liftLong <- melt(lift)
+names(liftLong) <- c("words", "topics", "lift")
+phiLong <- melt(phi)
+names(phiLong) <- c("words", "topics", "phi")
+
+i = 0.5
+relevance <- i*log(phi) + (1 - i)*log(lift)
+relevance <- melt(relevance)
+names(relevance) <- c("words", "topics", "relevance")
 # =====================================
 # Create a csv of the words, and key 
 # metrics associated with them
 # =====================================
 
-# Dataframe #2: distribution of words across topics
+# Dataframe #4: distribution of words across topics
 wordsTopics <- as.data.frame(posterior(lda)$terms)
 wordsTopics$topics = 1:nrow(wordsTopics)
 wordsTopics <- melt(wordsTopics, id="topics")
 colnames(wordsTopics) <- c("topics", "words", "probability")
 
-# Dataframe #3: Calculate the word frequencies
+# Dataframe #5: Calculate the word frequencies
 wordsFreq <- data.frame(words = names(colSums(dtmd)),
                           frequency = unname(colSums(dtmd)))
 
 # Merge the dataframes together
 wordsTopics <- merge(wordsTopics, wordsFreq, on = "words", all = TRUE)
 wordsTopics <- merge(wordsTopics, wordsSaliency, on = "words", all = TRUE)
+wordsTopics <- merge(wordsTopics, liftLong, on = c("words", "topics"), all = TRUE)
+wordsTopics <- merge(wordsTopics, phiLong, on = c("words", "topics"), all = TRUE)
+wordsTopics <- merge(wordsTopics, relevance, on = c("words", "topics"), all = TRUE)
 write.csv(wordsTopics, paste(loc, 'wordsTopics.csv', sep=""), row.names=FALSE)
