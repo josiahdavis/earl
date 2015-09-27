@@ -25,7 +25,7 @@ dr <- read.csv(paste(loc, 'yelp_review.csv', sep=""))
 str(dr)
 
 # Conver to list
-texts <- dr[1:500,]$text
+texts <- dr$text
 texts <- lapply(texts, as.String)
 
 # =====================================
@@ -62,10 +62,6 @@ POSGetter <- function(doc, parts) {
   }
 }
 
-typeof(POSGetter(texts_annotated[[2]], c("NN", "NNS", "NNP", "NNPS")))
-
-typeof(POSGetter(texts_annotated[[2]], c("fasdasd", "afasda")))
-
 # Identify the nouns
 nouns <- texts_annotated %>% lapply(POSGetter, parts = c("NN", "NNS", "NNP", "NNPS"))
 
@@ -91,7 +87,8 @@ d <- tm_map(d, content_transformer(tolower))
 
 # Remove stopwords
 stopwords <- c(stopwords("english"), "bank", "bofa", "boa", "wells", 
-               "fargo", "america", "chase", "thing")
+               "fargo", "america", "chase", "thing", "branch", "location", 
+               "locations", "banking", "account")
 d <- tm_map(d, removeWords, stopwords)
 
 # Strip whitespace
@@ -117,15 +114,13 @@ dtmd <- dtmd[rowSums(dtmd) > 0,]
 # =====================================
 
 # Start out using small number of topics purely for interpretability
-lda <- LDA(dtmd, 6)
+lda <- LDA(dtmd, 3)
 
 # Top 10 terms for each topic
 terms <- terms(lda, 10)
-terms
 
 # Most likely topic for each document
 topics <- topics(lda, 5)
-topics
 
 # =====================================
 # Create JSON for the 
