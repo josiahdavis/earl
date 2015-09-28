@@ -25,3 +25,11 @@ d$neutCount <- unlist(lapply(d$text, function(x) sum(get_sentiment(get_sentences
 
 # Write out dataframe
 write.csv(d, paste(loc, 'sentiment.csv', sep=""), row.names=FALSE)
+
+# TESTING
+sent <- "Excellent customer service! 
+        Everyone at this location is always helpful and quick with my transactions! 
+        I absolutely HATE this bank!
+        The bank is located off of Howard Street."
+sentiment <- get_sentiment(get_sentences(as.character(sent)), method = "bing")
+sentiment
