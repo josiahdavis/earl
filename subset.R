@@ -30,6 +30,10 @@ dr <- dr[dr$business_id %in% db$business_id, ]
 d <- merge(dr, db[,c("business_id", "name", "review_count", "stars", "state", "full_address")],
       by = "business_id", all.x = TRUE, all.y = FALSE)
 
+# Clean up the data
+names(d)[names(d)=="stars.x"] <- "stars_review"
+names(d)[names(d)=="stars.y"] <- "stars_business"
+
 # Write subset data
 newLoc <- '/Users/josiahdavis/Documents/GitHub/earl/'
 # write.csv(db, paste(newLoc, 'yelp_business.csv', sep=""), row.names=FALSE)
