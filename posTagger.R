@@ -25,7 +25,7 @@ dr <- read.csv(paste(loc, 'yelp_review.csv', sep=""))
 str(dr)
 
 # Conver to list
-texts <- dr$text
+texts <- dr[(dr$votes_useful > 0),]$text
 texts <- lapply(texts, as.String)
 
 # =====================================
@@ -130,7 +130,8 @@ json <- createJSON(phi = posterior(lda)$terms,
                    theta = lda@gamma,
                    doc.length = rowSums(dtmd),
                    vocab = colnames(dtmd),
-                   term.frequency = colSums(dtmd))
+                   term.frequency = colSums(dtmd),
+                   R = 10)
 
 # Launch the interactive visualization
 serVis(json)
