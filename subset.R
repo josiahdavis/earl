@@ -22,8 +22,17 @@ dim(dr)
 d <- merge(dr, db[,c("business_id", "name", "categories", "city", "state")],
       by = "business_id", all.x = TRUE, all.y = FALSE)
 
+# Subset for only major states
 states <- c("AZ", "NV", "NC", "PA", "WI", "IL", "SC")
 d <- d[d$state %in% states,]
+
+# Subset only for Starbucks records (also filter out German records)
+dr <- dr[(dr$name == "Starbucks") & 
+           (dr$votes_useful > 0) &
+           !(grepl(pattern = "das", x = dr$text)) & 
+           !(grepl(pattern = "haw", x = dr$text)) & 
+           !(grepl(pattern = "tres", x = dr$text)),]
+
 
 # Write subset data
 newLoc <- '/Users/josiahdavis/Documents/GitHub/earl/'
