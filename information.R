@@ -1,4 +1,5 @@
 # CALCULATE INFORMATION DENSITY
+library(lsa)
 
 # Load the Data
 loc <- '/Users/josiahdavis/Documents/GitHub/earl/'
@@ -42,16 +43,9 @@ d <- tm_map(d, stripWhitespace)
 # Convert to a document term matrix (rows are documents, columns are words)
 dtm <- as.matrix(DocumentTermMatrix(d))
 
-# Define Review Internal Entropy Function
-reviewEntropy <- function(x) { 
-  probWordReview <- x / sum(x)
-  N = sum(x)
-  product <- probWordReview * log2(probWordReview)
-  product <- product[!is.na(product)]
-  ent <- ( -1 / N ) * sum(product)
-  ent
-}
-
-# Apply to the entire Document Term Matrix
-dr$entropy <- apply(dtm, MARGIN = 1, FUN = reviewEntropy)
+# Calculate the entropy and words lenth
+dr$entropy <- entropy(dtm)
 dr$wordsLength <- apply(dtm, MARGIN = 1, FUN = sum)
+
+# Write to csv
+write.csv(dr, paste(loc, 'yelp_review_Banking.csv', sep=""), row.names=FALSE)
