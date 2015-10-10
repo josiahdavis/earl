@@ -9,7 +9,30 @@ loc <- '/Users/josiahdavis/Documents/DraftBlog/yelp_dataset_challenge_academic_d
 db <- read.csv(paste(loc, 'yelp_academic_dataset_business.csv', sep=""))
 
 # Subset to only include business information for coffee shops
-db <- db[grepl("Coffee & Tea", db$categories),]
+db <- db[grepl("Coffee & Tea", db$categories) | 
+          grepl("Clothing", db$categories) | 
+           grepl("Banks", db$categories) ,]
+
+# List the top names for a given category
+head(summary(db[grepl("Coffee", db$categories),]$name), 15)
+
+# Subset to only include particular stores of interest
+botiqueCoffee <- c("Dutch Bros Coffee", "Second Cup", "Costa Coffee", "Crazy Mocha Coffee", 
+           "Crazy Mocha Coffee Co", "Java U", "Lola Coffee", "Affogato", "Beanscene", 
+           "Bevande Coffee", "Blynk Organic", "Bunna Coffee", "Cafe Java U", 
+           "Saxby's Coffee", "The Roasted Bean")
+
+largeCoffee <- c("Starbucks", "Dunkin' Donuts", "The Coffee Bean & Tea Leaf", "Caribou Coffee")
+
+clothing <- c("Kohl's Department Stores", "Macy's", "JCPenney", "Men's Wearhouse",
+              "Gap", "Banana Republic", "Urban Outfitters", "American Apparel",
+              "Forever 21", "Old Navy", "Anthropologie")
+
+banks <- c("Wells Fargo Bank", "Bank of America", "Chase Bank")
+
+shops <- c(banks, clothing, largeCoffee)
+
+db <- db[db$name %in% shops,]
 
 # Read in review text
 dr <- read.csv(paste(loc, 'yelp_academic_dataset_review.csv', sep=""), sep=",")
@@ -18,22 +41,30 @@ dr <- read.csv(paste(loc, 'yelp_academic_dataset_review.csv', sep=""), sep=",")
 dr <- dr[dr$business_id %in% db$business_id, ]
 dim(dr)
 
+db$industry <- ifelse(grepl("Coffee & Tea", db$categories), "Coffee", 
+                      ifelse(grepl("Banks", db$categories), "Banking", "Clothing"))
+
 # Add business information into the main dataframe
-d <- merge(dr, db[,c("business_id", "name", "categories", "city", "state")],
+d <- merge(dr, db[,c("business_id", "name", "categories", "city", "state", "industry")],
       by = "business_id", all.x = TRUE, all.y = FALSE)
+
 
 # Subset for only major states
 states <- c("AZ", "NV", "NC", "PA", "WI", "IL", "SC")
 d <- d[d$state %in% states,]
 
-# Subset only for Starbucks records (also filter out German records)
-dr <- dr[(dr$name == "Starbucks") & 
-           (dr$votes_useful > 0) &
-           !(grepl(pattern = "das", x = dr$text)) & 
-           !(grepl(pattern = "haw", x = dr$text)) & 
-           !(grepl(pattern = "tres", x = dr$text)),]
+# Filter out German records
+d <- d[!(grepl(pattern = "das", x = d$text)) & 
+           !(grepl(pattern = "haw", x = d$text)) & 
+           !(grepl(pattern = "tres", x = d$text)),]
 
-
-# Write subset data
+# Write subset data into seperate files for industries
 newLoc <- '/Users/josiahdavis/Documents/GitHub/earl/'
+industries <- names(summary(d$industry))
+for (i in industries){
+  fn <- paste(newLoc, 'yelp_review_', i, '.csv', sep="")
+  write.csv(d[d$industry == i,], fn, row.names=FALSE)
+}
+
+# Write out complete file
 write.csv(d, paste(newLoc, 'yelp_review.csv', sep=""), row.names=FALSE)
