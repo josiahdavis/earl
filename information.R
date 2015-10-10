@@ -42,14 +42,6 @@ d <- tm_map(d, stripWhitespace)
 # Convert to a document term matrix (rows are documents, columns are words)
 dtm <- as.matrix(DocumentTermMatrix(d))
 
-x <- dtm[1,]
-probWordReview <- x / sum(x)
-N = sum(x)
-product <- probWordReview * log2(probWordReview)
-product <- product[!is.na(product)]
-ent <- ( -1 / N ) * sum(product)
-ent
-
 # Define Review Internal Entropy Function
 reviewEntropy <- function(x) { 
   probWordReview <- x / sum(x)
@@ -59,19 +51,6 @@ reviewEntropy <- function(x) {
   ent <- ( -1 / N ) * sum(product)
   ent
 }
-
-# TESTING
-dtmRow <- dtm[1,]
-reviewEntropy(dtmRow)
-sum(dtmRow > 0)
-
-dtmRow <- dtm[2,]
-reviewEntropy(dtmRow)
-sum(dtmRow > 0)
-
-dtmRow <- dtm[3,]
-reviewEntropy(dtmRow)
-sum(dtmRow > 0)
 
 # Apply to the entire Document Term Matrix
 dr$entropy <- apply(dtm, MARGIN = 1, FUN = reviewEntropy)
