@@ -2,9 +2,7 @@
 
 # Load the Data
 loc <- '/Users/josiahdavis/Documents/GitHub/earl/'
-dr <- read.csv(paste(loc, 'yelp_review.csv', sep=""))
-
-# Perform text mining transformations
+dr <- read.csv(paste(loc, 'yelp_review_Banking.csv', sep=""))
 
 # Convert the relevant data into a corpus object with the tm package
 d <- Corpus(VectorSource(dr$text))
@@ -44,10 +42,13 @@ d <- tm_map(d, stripWhitespace)
 # Convert to a document term matrix (rows are documents, columns are words)
 dtm <- as.matrix(DocumentTermMatrix(d))
 
-dtmRow <- dtm[1,]
-probs <- dtmRow / sum(dtmRow)
-n <- sum(dtmRow)
-sum(probs*log(probs))
+x <- dtm[1,]
+probWordReview <- x / sum(x)
+N = sum(x)
+product <- probWordReview * log2(probWordReview)
+product <- product[!is.na(product)]
+ent <- ( -1 / N ) * sum(product)
+ent
 
 # Define Review Internal Entropy Function
 reviewEntropy <- function(x) { 
@@ -55,7 +56,8 @@ reviewEntropy <- function(x) {
   N = sum(x)
   product <- probWordReview * log2(probWordReview)
   product <- product[!is.na(product)]
-  return ( -1 / N ) * sum(product)
+  ent <- ( -1 / N ) * sum(product)
+  ent
 }
 
 # TESTING
@@ -72,4 +74,5 @@ reviewEntropy(dtmRow)
 sum(dtmRow > 0)
 
 # Apply to the entire Document Term Matrix
-information <- apply(x = dtm, MARGIN = 1, FUN = reviewEntropy)
+dr$entropy <- apply(dtm, MARGIN = 1, FUN = reviewEntropy)
+dr$wordsLength <- apply(dtm, MARGIN = 1, FUN = sum)
