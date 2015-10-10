@@ -16,8 +16,9 @@ earliestDate <- summarise(group,
 # Join by the business ID
 dr <- left_join(dr, earliestDate, by = "business_id")
 
-# Calculate the age of the review in days
-dr$age <- as.numeric(dr$date - dr$firstReview)
+# Calculate the days since the opening and since date of last review
+dr$daysSinceOpen <- as.numeric(dr$date - dr$firstReview)
+dr$age <- as.numeric(max(dr$date) - dr$date)
 
 # Write to csv
 fn <- paste(newLoc, 'yelp_review_Banking.csv', sep="")
