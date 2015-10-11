@@ -23,14 +23,13 @@ botiqueCoffee <- c("Dutch Bros Coffee", "Second Cup", "Costa Coffee", "Crazy Moc
            "Bevande Coffee", "Blynk Organic", "Bunna Coffee", "Cafe Java U", 
            "Saxby's Coffee", "The Roasted Bean")
 
-clothing <- c("Kohl's Department Stores", "Macy's", "JCPenney", "Men's Wearhouse",
+clothing <- c("Kohl's Department Stores", "JCPenney", "Men's Wearhouse",
               "Gap", "Banana Republic", "Urban Outfitters", "American Apparel",
               "Forever 21", "Old Navy", "Anthropologie")
 
 banks <- c("Wells Fargo Bank", "Bank of America", "Chase Bank")
 
-iceCream <- c("Cold Stone Creamery", "Dairy Queen", "Baskin Robbins", "Baskin-Robbins",
-              "Ben & Jerry's", "Culver's")
+iceCream <- c("Cold Stone Creamery", "Dairy Queen", "Baskin Robbins", "Baskin-Robbins")
 
 shops <- c(banks, clothing, botiqueCoffee, iceCream)
 
