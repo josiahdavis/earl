@@ -25,7 +25,7 @@ dr <- read.csv(paste(loc, 'yelp_review.csv', sep=""))
 str(dr)
 
 # Conver to list
-texts <- dr[(dr$votes_useful > 0),]$text
+texts <- dr[(dr$votes_useful > 0) & (dr$industry == "Banking"),]$text
 texts <- lapply(texts, as.String)
 
 # =====================================
@@ -85,11 +85,35 @@ d <- Corpus(VectorSource(d$reviews))
 # Convert everything to lower case
 d <- tm_map(d, content_transformer(tolower))
 
-# Remove stopwords
+# Remove initial list of stopwords
 stopwords <- c(stopwords("english"), "bank", "bofa", "boa", "wells", 
                "fargo", "america", "chase", "thing", "branch", "location", 
                "locations", "banking", "account")
+
 d <- tm_map(d, removeWords, stopwords)
+
+# Read in list of 5000+ stopwords compiled by Matthew Jockers
+fileStopwords <- paste(loc, 'stopwords.txt', sep="")
+stopwords <- readChar(fileStopwords, file.info(fileStopwords)$size)
+stopwords <- unlist(strsplit(stopwords, split=", "))
+
+for (i in 1:5){
+  if(i == 1){
+    start <- 1
+  }else{
+    start <- i * 1000
+  }
+  
+  if(i < 5){
+    end <- (i + 1) * 1000
+  }else{
+    end <- 5631
+  }
+  d <- tm_map(d, removeWords, stopwords[start:end])
+}
+
+# Stem words
+d <- tm_map(d, stemDocument)
 
 # Strip whitespace
 d <- tm_map(d, stripWhitespace)
@@ -106,7 +130,9 @@ freq[head(ord, 100)]
 
 # Subset to only include words appear at least a couple times
 dtmd <- dtmd[,freq > 5]
-dtmd <- dtmd[rowSums(dtmd) > 0,]
+rowKeep <- rowSums(dtmd) > 0
+dtmd <- dtmd[rowKeep > 0,]
+dim(dtmd)
 
 # =====================================
 # Perform Latent 
@@ -135,6 +161,17 @@ json <- createJSON(phi = posterior(lda)$terms,
 
 # Launch the interactive visualization
 serVis(json)
+
+# ==========
+# Add topical information into core dataframe
+# ==========
+
+dr <- dr[(dr$votes_useful > 0) & (dr$industry == "Banking"),]
+topics <- data.frame(lda@gamma)
+names(topics) <- c("Topic 1", "Topic 2", "Topic 3")
+dr <- cbind(dr[rowKeep,], topics)
+dr <- dr[,order(names(dr))]
+write.csv(dr[,order(names(dr))], paste(loc, 'yelp_review_Banking.csv', sep=""), row.names=FALSE)
 
 # =====================================
 # Calculate the saliency and relevancy scores
