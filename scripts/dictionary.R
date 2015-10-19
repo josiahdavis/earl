@@ -54,10 +54,6 @@ words <- c("Management" = "\\b[Mm]anage[rsment]*\\b",
 
 # Count the words associated with a particular text
 countWords <- function(w, x) {
-  sum(grepl(w, strsplit(as.character(x), split = " ")[[1]]))
-}
-
-countWords <- function(w, x) {
   str_count(x, w)
 }
 
