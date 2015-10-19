@@ -52,12 +52,10 @@ words <- c("Management" = "\\b[Mm]anage[rsment]*\\b",
            "Furniture" = "\\b[Ff]urniture\\b|\\b[Dd]resser\\b|\\b[Tt]ables?\\b|\\b[Ss]ofas?\\b
                           |\\b[Cc]hairs?\\b|\\b[Ss]tools?\\b|\\b[Cc]ouch(es)?\\b|\\b[Rr]ecliners?\\b")
 
-# Count the words associated with a particular text
+# Count the words (w) associated with a particular text (x)
 countWords <- function(w, x) {
   str_count(x, w)
 }
-
-## NEED TO FIX TO INCLUDE 2 WORD PHRASES, RIGHT NOW THAT IS NOT WORKING.
 
 # Create the dictionary of word counts
 dtm <- t(sapply(d$text, function(x) sapply(words, function(w) countWords(w, x) )))
