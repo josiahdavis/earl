@@ -1,0 +1,785 @@
+"From","To","Correlation"
+"Management","Management",1
+"Jewelry","Management",0.0744265126879041
+"Macy's Card","Management",0.0565605640010246
+"Returns","Management",-0.000146451186681529
+"Location","Management",-0.0346798402550429
+"Shoes","Management",0.177740824522962
+"Customer Service","Management",0.0473241914336064
+"Associate","Management",0.0807876543938948
+"Purse","Management",-0.00516218531034866
+"Delivery","Management",0.157844298362723
+"Website","Management",0.0487192339716095
+"Display","Management",-0.00535118326940355
+"Fashion","Management",-0.0401898379121816
+"Dillard's","Management",0.168879386732406
+"Register","Management",-0.0262176724671773
+"Time","Management",0.15033748978405
+"Deal","Management",0.0146299053112234
+"Quality","Management",-0.0334027590394779
+"Clothing","Management",-0.0299557605415406
+"Clean","Management",-0.0481683229028839
+"Cosmetics","Management",-0.0279624578616517
+"Price","Management",-0.0425687108179762
+"Women","Management",0.0877486520768541
+"Men","Management",-0.0167526256260473
+"Bedding","Management",-0.0229478989974592
+"Wedding","Management",-0.0245384088720909
+"Watches","Management",0.0237731131065763
+"Furniture","Management",0.0756751030618289
+"Management","Jewelry",0.0744265126879041
+"Jewelry","Jewelry",1
+"Macy's Card","Jewelry",0.172735944321857
+"Returns","Jewelry",-0.0208634058726356
+"Location","Jewelry",0.0706507322449654
+"Shoes","Jewelry",0.00471162333369076
+"Customer Service","Jewelry",0.205066354649368
+"Associate","Jewelry",0.188502814228558
+"Purse","Jewelry",0.0224814968356834
+"Delivery","Jewelry",-0.00829873315140723
+"Website","Jewelry",0.216920438568405
+"Display","Jewelry",0.247363648450854
+"Fashion","Jewelry",0.00415248293782692
+"Dillard's","Jewelry",0.0313240871339745
+"Register","Jewelry",-0.00235275537537333
+"Time","Jewelry",0.208849888698868
+"Deal","Jewelry",0.067944159913913
+"Quality","Jewelry",-0.0485440939225652
+"Clothing","Jewelry",-0.00442188686808261
+"Clean","Jewelry",-0.0520344508073369
+"Cosmetics","Jewelry",-0.00461911640098441
+"Price","Jewelry",0.0167387718023626
+"Women","Jewelry",0.000656783537256093
+"Men","Jewelry",0.047187826061006
+"Bedding","Jewelry",-0.033350088324788
+"Wedding","Jewelry",0.0101066193062641
+"Watches","Jewelry",0.143038261920878
+"Furniture","Jewelry",0.0299155151735947
+"Management","Macy's Card",0.0565605640010246
+"Jewelry","Macy's Card",0.172735944321857
+"Macy's Card","Macy's Card",1
+"Returns","Macy's Card",-0.0356301358914553
+"Location","Macy's Card",0.0737530307357861
+"Shoes","Macy's Card",0.0171532263831769
+"Customer Service","Macy's Card",0.0936243076691057
+"Associate","Macy's Card",0.072375946315055
+"Purse","Macy's Card",0.00963120402389155
+"Delivery","Macy's Card",0.177764495273602
+"Website","Macy's Card",0.0271692187838676
+"Display","Macy's Card",0.0174293279205044
+"Fashion","Macy's Card",-0.062142106688657
+"Dillard's","Macy's Card",-0.00124601197918326
+"Register","Macy's Card",0.143293553465901
+"Time","Macy's Card",0.140765453635393
+"Deal","Macy's Card",0.131280968127597
+"Quality","Macy's Card",0.0782494718666162
+"Clothing","Macy's Card",0.0120650364870118
+"Clean","Macy's Card",-0.0516791817654449
+"Cosmetics","Macy's Card",0.0365239971436745
+"Price","Macy's Card",0.0561037449989354
+"Women","Macy's Card",0.00456197531022964
+"Men","Macy's Card",0.0755713037764564
+"Bedding","Macy's Card",0.0946509283154165
+"Wedding","Macy's Card",-0.0465571276270892
+"Watches","Macy's Card",-0.00700306173072573
+"Furniture","Macy's Card",0.100655524406553
+"Management","Returns",-0.000146451186681529
+"Jewelry","Returns",-0.0208634058726356
+"Macy's Card","Returns",-0.0356301358914553
+"Returns","Returns",1
+"Location","Returns",0.00880547885231634
+"Shoes","Returns",-0.040286583192148
+"Customer Service","Returns",0.0426883010257767
+"Associate","Returns",0.0676320606206861
+"Purse","Returns",0.142506852584682
+"Delivery","Returns",-0.0201177767771071
+"Website","Returns",0.228537770140982
+"Display","Returns",-0.0294417428707846
+"Fashion","Returns",0.0742148139091323
+"Dillard's","Returns",0.0691513328480679
+"Register","Returns",0.000342589240239345
+"Time","Returns",0.0711985490532919
+"Deal","Returns",-0.00126936162922369
+"Quality","Returns",0.0490583777560259
+"Clothing","Returns",0.191038910515758
+"Clean","Returns",-0.0123078792721514
+"Cosmetics","Returns",0.108691906750953
+"Price","Returns",0.0054705298647598
+"Women","Returns",-0.0356010037337151
+"Men","Returns",0.0047145525210565
+"Bedding","Returns",-0.0113373008111276
+"Wedding","Returns",0.0475782966271056
+"Watches","Returns",-0.0226652930401535
+"Furniture","Returns",0.091423046962395
+"Management","Location",-0.0346798402550429
+"Jewelry","Location",0.0706507322449654
+"Macy's Card","Location",0.0737530307357861
+"Returns","Location",0.00880547885231634
+"Location","Location",1
+"Shoes","Location",-0.000496870714080835
+"Customer Service","Location",0.0786592125019922
+"Associate","Location",0.0840001362591329
+"Purse","Location",0.168142775171266
+"Delivery","Location",-0.00283566482817344
+"Website","Location",0.0477157786800569
+"Display","Location",0.106011275959052
+"Fashion","Location",0.0541376117725415
+"Dillard's","Location",0.0114534280473964
+"Register","Location",-0.00406432808372608
+"Time","Location",0.0691416674267935
+"Deal","Location",0.139140564743934
+"Quality","Location",0.165215384890316
+"Clothing","Location",-0.0674230918133357
+"Clean","Location",0.189471179280275
+"Cosmetics","Location",0.0599785803124655
+"Price","Location",-0.0204609046939575
+"Women","Location",0.154950896904772
+"Men","Location",0.0714094174514968
+"Bedding","Location",0.162276012110578
+"Wedding","Location",0.00164625247686957
+"Watches","Location",-0.00719066521099269
+"Furniture","Location",0.0274333550746903
+"Management","Shoes",0.177740824522962
+"Jewelry","Shoes",0.00471162333369076
+"Macy's Card","Shoes",0.0171532263831769
+"Returns","Shoes",-0.040286583192148
+"Location","Shoes",-0.000496870714080835
+"Shoes","Shoes",1
+"Customer Service","Shoes",0.0457141236835744
+"Associate","Shoes",0.0387460934655051
+"Purse","Shoes",0.0474581457089281
+"Delivery","Shoes",-0.0242517258483037
+"Website","Shoes",0.037307425184132
+"Display","Shoes",-0.0181839294906427
+"Fashion","Shoes",0.0743740017708
+"Dillard's","Shoes",0.0345461623251385
+"Register","Shoes",0.0711116118606604
+"Time","Shoes",0.135299235826855
+"Deal","Shoes",0.0727015830186511
+"Quality","Shoes",0.00178998921701375
+"Clothing","Shoes",0.0958571769794247
+"Clean","Shoes",-0.0922885504437347
+"Cosmetics","Shoes",-0.0141282806165398
+"Price","Shoes",-0.0653699163705547
+"Women","Shoes",0.203358618060795
+"Men","Shoes",0.0649997226577149
+"Bedding","Shoes",-0.0321089654435538
+"Wedding","Shoes",-0.00424015607138258
+"Watches","Shoes",-0.0182703537039416
+"Furniture","Shoes",-0.0180445496649137
+"Management","Customer Service",0.0473241914336064
+"Jewelry","Customer Service",0.205066354649368
+"Macy's Card","Customer Service",0.0936243076691057
+"Returns","Customer Service",0.0426883010257767
+"Location","Customer Service",0.0786592125019922
+"Shoes","Customer Service",0.0457141236835744
+"Customer Service","Customer Service",1
+"Associate","Customer Service",0.0999179541963131
+"Purse","Customer Service",0.0190328337691458
+"Delivery","Customer Service",0.151141326794171
+"Website","Customer Service",0.0917658027700802
+"Display","Customer Service",0.0340085682020545
+"Fashion","Customer Service",0.102552063478423
+"Dillard's","Customer Service",-0.0180136938724738
+"Register","Customer Service",0.154104884954877
+"Time","Customer Service",0.129235258549352
+"Deal","Customer Service",0.113493845552087
+"Quality","Customer Service",0.0157448144064886
+"Clothing","Customer Service",0.0913113582584394
+"Clean","Customer Service",-0.0201233316892418
+"Cosmetics","Customer Service",0.00856316299176543
+"Price","Customer Service",-0.0310312230267786
+"Women","Customer Service",0.00195682525479881
+"Men","Customer Service",-0.0169817992633938
+"Bedding","Customer Service",-0.00648204952857417
+"Wedding","Customer Service",0.0661113097705852
+"Watches","Customer Service",0.170962591034221
+"Furniture","Customer Service",0.211232377027795
+"Management","Associate",0.0807876543938948
+"Jewelry","Associate",0.188502814228558
+"Macy's Card","Associate",0.072375946315055
+"Returns","Associate",0.0676320606206861
+"Location","Associate",0.0840001362591329
+"Shoes","Associate",0.0387460934655051
+"Customer Service","Associate",0.0999179541963131
+"Associate","Associate",1
+"Purse","Associate",0.0282257813122865
+"Delivery","Associate",0.0484821274146193
+"Website","Associate",0.0544006795609745
+"Display","Associate",0.159956848232142
+"Fashion","Associate",-0.0208050943950692
+"Dillard's","Associate",-0.0481758077592063
+"Register","Associate",0.173000716844475
+"Time","Associate",0.316180464542256
+"Deal","Associate",0.129238786026633
+"Quality","Associate",-0.0503676800245185
+"Clothing","Associate",0.0517299782347936
+"Clean","Associate",0.0715990411000935
+"Cosmetics","Associate",0.178934557958189
+"Price","Associate",-0.0388185850170418
+"Women","Associate",0.108886655360378
+"Men","Associate",0.0619695951189919
+"Bedding","Associate",-0.00771503357984039
+"Wedding","Associate",-0.0426532125820012
+"Watches","Associate",0.09302263909119
+"Furniture","Associate",0.049623638097116
+"Management","Purse",-0.00516218531034866
+"Jewelry","Purse",0.0224814968356834
+"Macy's Card","Purse",0.00963120402389155
+"Returns","Purse",0.142506852584682
+"Location","Purse",0.168142775171266
+"Shoes","Purse",0.0474581457089281
+"Customer Service","Purse",0.0190328337691458
+"Associate","Purse",0.0282257813122865
+"Purse","Purse",1
+"Delivery","Purse",-0.0104410534222036
+"Website","Purse",-0.0205258822206538
+"Display","Purse",-0.0152801581189851
+"Fashion","Purse",0.0523512032580802
+"Dillard's","Purse",-0.0206557074925505
+"Register","Purse",-0.025781373699097
+"Time","Purse",0.0589058075193836
+"Deal","Purse",0.146288889176233
+"Quality","Purse",-0.0234510322337441
+"Clothing","Purse",0.0999489729682288
+"Clean","Purse",0.280481492602082
+"Cosmetics","Purse",0.131478079385345
+"Price","Purse",-0.0298861602528536
+"Women","Purse",0.0041775693052072
+"Men","Purse",0.106641256599357
+"Bedding","Purse",-0.0161110020417802
+"Wedding","Purse",0.0409954246547334
+"Watches","Purse",0.01365044834795
+"Furniture","Purse",-0.00909016794391
+"Management","Delivery",0.157844298362723
+"Jewelry","Delivery",-0.00829873315140723
+"Macy's Card","Delivery",0.177764495273602
+"Returns","Delivery",-0.0201177767771071
+"Location","Delivery",-0.00283566482817344
+"Shoes","Delivery",-0.0242517258483037
+"Customer Service","Delivery",0.151141326794171
+"Associate","Delivery",0.0484821274146193
+"Purse","Delivery",-0.0104410534222036
+"Delivery","Delivery",1
+"Website","Delivery",-0.0182552009803489
+"Display","Delivery",-0.0135897865180627
+"Fashion","Delivery",-0.0303376315568034
+"Dillard's","Delivery",-0.0183706642966305
+"Register","Delivery",-0.0229293023007274
+"Time","Delivery",-0.0112802789390547
+"Deal","Delivery",-0.0338528564251304
+"Quality","Delivery",-0.0208567554866347
+"Clothing","Delivery",-0.0356933683927229
+"Clean","Delivery",-0.0300764057184427
+"Cosmetics","Delivery",-0.0261303422340509
+"Price","Delivery",-0.0265799957381505
+"Women","Delivery",-0.0350311460156966
+"Men","Delivery",0.147797116085014
+"Bedding","Delivery",-0.0143287181084751
+"Wedding","Delivery",-0.0153218359379054
+"Watches","Delivery",-0.0175994536040156
+"Furniture","Delivery",0.476228047757174
+"Management","Website",0.0487192339716095
+"Jewelry","Website",0.216920438568405
+"Macy's Card","Website",0.0271692187838676
+"Returns","Website",0.228537770140982
+"Location","Website",0.0477157786800569
+"Shoes","Website",0.037307425184132
+"Customer Service","Website",0.0917658027700802
+"Associate","Website",0.0544006795609745
+"Purse","Website",-0.0205258822206538
+"Delivery","Website",-0.0182552009803489
+"Website","Website",1
+"Display","Website",0.163244685577372
+"Fashion","Website",-0.04344328030359
+"Dillard's","Website",-0.00669086787726063
+"Register","Website",0.0562343618240117
+"Time","Website",0.126832598126728
+"Deal","Website",0.0338832811314936
+"Quality","Website",0.0926204236057905
+"Clothing","Website",-0.0476762762472136
+"Clean","Website",-0.0163067612681727
+"Cosmetics","Website",-0.0245838206858939
+"Price","Website",-0.00116636480852591
+"Women","Website",0.0127448872868748
+"Men","Website",-0.0180289771319911
+"Bedding","Website",0.0197267494224497
+"Wedding","Website",-0.0301209262273129
+"Watches","Website",0.00298617613296709
+"Furniture","Website",0.192216334545497
+"Management","Display",-0.00535118326940355
+"Jewelry","Display",0.247363648450854
+"Macy's Card","Display",0.0174293279205044
+"Returns","Display",-0.0294417428707846
+"Location","Display",0.106011275959052
+"Shoes","Display",-0.0181839294906427
+"Customer Service","Display",0.0340085682020545
+"Associate","Display",0.159956848232142
+"Purse","Display",-0.0152801581189851
+"Delivery","Display",-0.0135897865180627
+"Website","Display",0.163244685577372
+"Display","Display",1
+"Fashion","Display",-0.0443981836313249
+"Dillard's","Display",-0.0268848978979811
+"Register","Display",0.0816291752879399
+"Time","Display",0.0399634852365802
+"Deal","Display",0.0844995921278038
+"Quality","Display",0.00564877685959568
+"Clothing","Display",-0.0380288430197119
+"Clean","Display",0.118264910418576
+"Cosmetics","Display",0.0378933011253742
+"Price","Display",0.0256379773112709
+"Women","Display",0.103381381556668
+"Men","Display",0.0771574126581432
+"Bedding","Display",0.0395356357790139
+"Wedding","Display",-0.0224230320770576
+"Watches","Display",0.116683639844147
+"Furniture","Display",-0.0100710133056947
+"Management","Fashion",-0.0401898379121816
+"Jewelry","Fashion",0.00415248293782692
+"Macy's Card","Fashion",-0.062142106688657
+"Returns","Fashion",0.0742148139091323
+"Location","Fashion",0.0541376117725415
+"Shoes","Fashion",0.0743740017708
+"Customer Service","Fashion",0.102552063478423
+"Associate","Fashion",-0.0208050943950692
+"Purse","Fashion",0.0523512032580802
+"Delivery","Fashion",-0.0303376315568034
+"Website","Fashion",-0.04344328030359
+"Display","Fashion",-0.0443981836313249
+"Fashion","Fashion",1
+"Dillard's","Fashion",0.168173853881571
+"Register","Fashion",-0.0552681104808327
+"Time","Fashion",-0.0801884375400461
+"Deal","Fashion",0.0999770114147761
+"Quality","Fashion",-0.0126240700799215
+"Clothing","Fashion",0.0941690846544021
+"Clean","Fashion",0.0262710082443001
+"Cosmetics","Fashion",-0.00746974402357557
+"Price","Fashion",0.09475241202703
+"Women","Fashion",0.0121383880782442
+"Men","Fashion",0.0936090864228408
+"Bedding","Fashion",-0.0468122922266668
+"Wedding","Fashion",0.097970030103077
+"Watches","Fashion",0.112533446146456
+"Furniture","Fashion",0.0168187123589307
+"Management","Dillard's",0.168879386732406
+"Jewelry","Dillard's",0.0313240871339745
+"Macy's Card","Dillard's",-0.00124601197918326
+"Returns","Dillard's",0.0691513328480679
+"Location","Dillard's",0.0114534280473964
+"Shoes","Dillard's",0.0345461623251385
+"Customer Service","Dillard's",-0.0180136938724738
+"Associate","Dillard's",-0.0481758077592063
+"Purse","Dillard's",-0.0206557074925505
+"Delivery","Dillard's",-0.0183706642966305
+"Website","Dillard's",-0.00669086787726063
+"Display","Dillard's",-0.0268848978979811
+"Fashion","Dillard's",0.168173853881571
+"Dillard's","Dillard's",1
+"Register","Dillard's",0.0260046045089849
+"Time","Dillard's",-0.011819407241552
+"Deal","Dillard's",0.122239382000408
+"Quality","Dillard's",0.0259724907983949
+"Clothing","Dillard's",0.0614244340909206
+"Clean","Dillard's",-0.0595006474755027
+"Cosmetics","Dillard's",0.0898184731484341
+"Price","Dillard's",0.0673727915412916
+"Women","Dillard's",0.0169319076052026
+"Men","Dillard's",0.0730525206164358
+"Bedding","Dillard's",-0.0283467384011726
+"Wedding","Dillard's",0.0465196401202182
+"Watches","Dillard's",-0.0348172881579355
+"Furniture","Dillard's",-0.0421720694639573
+"Management","Register",-0.0262176724671773
+"Jewelry","Register",-0.00235275537537333
+"Macy's Card","Register",0.143293553465901
+"Returns","Register",0.000342589240239345
+"Location","Register",-0.00406432808372608
+"Shoes","Register",0.0711116118606604
+"Customer Service","Register",0.154104884954877
+"Associate","Register",0.173000716844475
+"Purse","Register",-0.025781373699097
+"Delivery","Register",-0.0229293023007274
+"Website","Register",0.0562343618240117
+"Display","Register",0.0816291752879399
+"Fashion","Register",-0.0552681104808327
+"Dillard's","Register",0.0260046045089849
+"Register","Register",1
+"Time","Register",0.0950270697935345
+"Deal","Register",0.0349716595056243
+"Quality","Register",-0.00520075396683763
+"Clothing","Register",0.0755302007299139
+"Clean","Register",0.0036279170463749
+"Cosmetics","Register",0.0166866862184998
+"Price","Register",-0.0449806557521109
+"Women","Register",0.151036041045539
+"Men","Register",-0.00815278542007731
+"Bedding","Register",0.158232793145858
+"Wedding","Register",0.120892146048444
+"Watches","Register",0.0628962693942956
+"Furniture","Register",-0.0120757583705541
+"Management","Time",0.15033748978405
+"Jewelry","Time",0.208849888698868
+"Macy's Card","Time",0.140765453635393
+"Returns","Time",0.0711985490532919
+"Location","Time",0.0691416674267935
+"Shoes","Time",0.135299235826855
+"Customer Service","Time",0.129235258549352
+"Associate","Time",0.316180464542256
+"Purse","Time",0.0589058075193836
+"Delivery","Time",-0.0112802789390547
+"Website","Time",0.126832598126728
+"Display","Time",0.0399634852365802
+"Fashion","Time",-0.0801884375400461
+"Dillard's","Time",-0.011819407241552
+"Register","Time",0.0950270697935345
+"Time","Time",1
+"Deal","Time",0.119808181862394
+"Quality","Time",0.0631906629211413
+"Clothing","Time",0.0622904074766956
+"Clean","Time",0.00929084897230681
+"Cosmetics","Time",0.135476647075178
+"Price","Time",0.00112343431441456
+"Women","Time",0.103016091147424
+"Men","Time",-0.00829842923639126
+"Bedding","Time",0.0708721534702047
+"Wedding","Time",-0.0419577695367411
+"Watches","Time",0.0255484213231122
+"Furniture","Time",0.0437053632926836
+"Management","Deal",0.0146299053112234
+"Jewelry","Deal",0.067944159913913
+"Macy's Card","Deal",0.131280968127597
+"Returns","Deal",-0.00126936162922369
+"Location","Deal",0.139140564743934
+"Shoes","Deal",0.0727015830186511
+"Customer Service","Deal",0.113493845552087
+"Associate","Deal",0.129238786026633
+"Purse","Deal",0.146288889176233
+"Delivery","Deal",-0.0338528564251304
+"Website","Deal",0.0338832811314936
+"Display","Deal",0.0844995921278038
+"Fashion","Deal",0.0999770114147761
+"Dillard's","Deal",0.122239382000408
+"Register","Deal",0.0349716595056243
+"Time","Deal",0.119808181862394
+"Deal","Deal",1
+"Quality","Deal",0.147359391411699
+"Clothing","Deal",0.0943247481629244
+"Clean","Deal",0.0943059633041637
+"Cosmetics","Deal",-0.0457798352729079
+"Price","Deal",0.100346790450407
+"Women","Deal",0.110249243285661
+"Men","Deal",0.106218969265353
+"Bedding","Deal",0.0230084912208548
+"Wedding","Deal",-0.0271049308854415
+"Watches","Deal",0.0326661555174038
+"Furniture","Deal",0.0554302033168387
+"Management","Quality",-0.0334027590394779
+"Jewelry","Quality",-0.0485440939225652
+"Macy's Card","Quality",0.0782494718666162
+"Returns","Quality",0.0490583777560259
+"Location","Quality",0.165215384890316
+"Shoes","Quality",0.00178998921701375
+"Customer Service","Quality",0.0157448144064886
+"Associate","Quality",-0.0503676800245185
+"Purse","Quality",-0.0234510322337441
+"Delivery","Quality",-0.0208567554866347
+"Website","Quality",0.0926204236057905
+"Display","Quality",0.00564877685959568
+"Fashion","Quality",-0.0126240700799215
+"Dillard's","Quality",0.0259724907983949
+"Register","Quality",-0.00520075396683763
+"Time","Quality",0.0631906629211413
+"Deal","Quality",0.147359391411699
+"Quality","Quality",1
+"Clothing","Quality",-0.0373385542263425
+"Clean","Quality",0.00583045302845542
+"Cosmetics","Quality",-0.0433885421048671
+"Price","Quality",0.232136102993502
+"Women","Quality",0.145100734257426
+"Men","Quality",0.0112592361030564
+"Bedding","Quality",0.186700716553257
+"Wedding","Quality",-0.0344134690179687
+"Watches","Quality",-0.0252154818370145
+"Furniture","Quality",0.334247004069644
+"Management","Clothing",-0.0299557605415406
+"Jewelry","Clothing",-0.00442188686808261
+"Macy's Card","Clothing",0.0120650364870118
+"Returns","Clothing",0.191038910515758
+"Location","Clothing",-0.0674230918133357
+"Shoes","Clothing",0.0958571769794247
+"Customer Service","Clothing",0.0913113582584394
+"Associate","Clothing",0.0517299782347936
+"Purse","Clothing",0.0999489729682288
+"Delivery","Clothing",-0.0356933683927229
+"Website","Clothing",-0.0476762762472136
+"Display","Clothing",-0.0380288430197119
+"Fashion","Clothing",0.0941690846544021
+"Dillard's","Clothing",0.0614244340909206
+"Register","Clothing",0.0755302007299139
+"Time","Clothing",0.0622904074766956
+"Deal","Clothing",0.0943247481629244
+"Quality","Clothing",-0.0373385542263425
+"Clothing","Clothing",1
+"Clean","Clothing",-0.0195310656080356
+"Cosmetics","Clothing",0.0858673392943427
+"Price","Clothing",0.020098551009885
+"Women","Clothing",0.0264889160279527
+"Men","Clothing",0.199808979671288
+"Bedding","Clothing",-0.0264194129022767
+"Wedding","Clothing",0.0389943161877051
+"Watches","Clothing",-0.0170507271463826
+"Furniture","Clothing",-0.0219032444875521
+"Management","Clean",-0.0481683229028839
+"Jewelry","Clean",-0.0520344508073369
+"Macy's Card","Clean",-0.0516791817654449
+"Returns","Clean",-0.0123078792721514
+"Location","Clean",0.189471179280275
+"Shoes","Clean",-0.0922885504437347
+"Customer Service","Clean",-0.0201233316892418
+"Associate","Clean",0.0715990411000935
+"Purse","Clean",0.280481492602082
+"Delivery","Clean",-0.0300764057184427
+"Website","Clean",-0.0163067612681727
+"Display","Clean",0.118264910418576
+"Fashion","Clean",0.0262710082443001
+"Dillard's","Clean",-0.0595006474755027
+"Register","Clean",0.0036279170463749
+"Time","Clean",0.00929084897230681
+"Deal","Clean",0.0943059633041637
+"Quality","Clean",0.00583045302845542
+"Clothing","Clean",-0.0195310656080356
+"Clean","Clean",1
+"Cosmetics","Clean",-0.0674716490072591
+"Price","Clean",0.0230170666376169
+"Women","Clean",0.0120338690225576
+"Men","Clean",0.0570719203921242
+"Bedding","Clean",0.0967979523187638
+"Wedding","Clean",0.0342326212955818
+"Watches","Clean",-0.0248947314181422
+"Furniture","Clean",-0.0547576902247157
+"Management","Cosmetics",-0.0279624578616517
+"Jewelry","Cosmetics",-0.00461911640098441
+"Macy's Card","Cosmetics",0.0365239971436745
+"Returns","Cosmetics",0.108691906750953
+"Location","Cosmetics",0.0599785803124655
+"Shoes","Cosmetics",-0.0141282806165398
+"Customer Service","Cosmetics",0.00856316299176543
+"Associate","Cosmetics",0.178934557958189
+"Purse","Cosmetics",0.131478079385345
+"Delivery","Cosmetics",-0.0261303422340509
+"Website","Cosmetics",-0.0245838206858939
+"Display","Cosmetics",0.0378933011253742
+"Fashion","Cosmetics",-0.00746974402357557
+"Dillard's","Cosmetics",0.0898184731484341
+"Register","Cosmetics",0.0166866862184998
+"Time","Cosmetics",0.135476647075178
+"Deal","Cosmetics",-0.0457798352729079
+"Quality","Cosmetics",-0.0433885421048671
+"Clothing","Cosmetics",0.0858673392943427
+"Clean","Cosmetics",-0.0674716490072591
+"Cosmetics","Cosmetics",1
+"Price","Cosmetics",-0.0611446779822118
+"Women","Cosmetics",0.0191774750837332
+"Men","Cosmetics",0.0284746597909602
+"Bedding","Cosmetics",-0.0275229606379617
+"Wedding","Cosmetics",0.0268270129629349
+"Watches","Cosmetics",0.0508996038162774
+"Furniture","Cosmetics",-0.0331755675171587
+"Management","Price",-0.0425687108179762
+"Jewelry","Price",0.0167387718023626
+"Macy's Card","Price",0.0561037449989354
+"Returns","Price",0.0054705298647598
+"Location","Price",-0.0204609046939575
+"Shoes","Price",-0.0653699163705547
+"Customer Service","Price",-0.0310312230267786
+"Associate","Price",-0.0388185850170418
+"Purse","Price",-0.0298861602528536
+"Delivery","Price",-0.0265799957381505
+"Website","Price",-0.00116636480852591
+"Display","Price",0.0256379773112709
+"Fashion","Price",0.09475241202703
+"Dillard's","Price",0.0673727915412916
+"Register","Price",-0.0449806557521109
+"Time","Price",0.00112343431441456
+"Deal","Price",0.100346790450407
+"Quality","Price",0.232136102993502
+"Clothing","Price",0.020098551009885
+"Clean","Price",0.0230170666376169
+"Cosmetics","Price",-0.0611446779822118
+"Price","Price",1
+"Women","Price",0.0827244896753287
+"Men","Price",-0.00798085239412841
+"Bedding","Price",0.0728891811733234
+"Wedding","Price",-0.0438567667161242
+"Watches","Price",-0.0503761516681586
+"Furniture","Price",0.177604733585969
+"Management","Women",0.0877486520768541
+"Jewelry","Women",0.000656783537256093
+"Macy's Card","Women",0.00456197531022964
+"Returns","Women",-0.0356010037337151
+"Location","Women",0.154950896904772
+"Shoes","Women",0.203358618060795
+"Customer Service","Women",0.00195682525479881
+"Associate","Women",0.108886655360378
+"Purse","Women",0.0041775693052072
+"Delivery","Women",-0.0350311460156966
+"Website","Women",0.0127448872868748
+"Display","Women",0.103381381556668
+"Fashion","Women",0.0121383880782442
+"Dillard's","Women",0.0169319076052026
+"Register","Women",0.151036041045539
+"Time","Women",0.103016091147424
+"Deal","Women",0.110249243285661
+"Quality","Women",0.145100734257426
+"Clothing","Women",0.0264889160279527
+"Clean","Women",0.0120338690225576
+"Cosmetics","Women",0.0191774750837332
+"Price","Women",0.0827244896753287
+"Women","Women",1
+"Men","Women",0.171652443176073
+"Bedding","Women",0.0863164208662271
+"Wedding","Women",0.00613041892664748
+"Watches","Women",-0.0296758048480048
+"Furniture","Women",-0.0586351691766582
+"Management","Men",-0.0167526256260473
+"Jewelry","Men",0.047187826061006
+"Macy's Card","Men",0.0755713037764564
+"Returns","Men",0.0047145525210565
+"Location","Men",0.0714094174514968
+"Shoes","Men",0.0649997226577149
+"Customer Service","Men",-0.0169817992633938
+"Associate","Men",0.0619695951189919
+"Purse","Men",0.106641256599357
+"Delivery","Men",0.147797116085014
+"Website","Men",-0.0180289771319911
+"Display","Men",0.0771574126581432
+"Fashion","Men",0.0936090864228408
+"Dillard's","Men",0.0730525206164358
+"Register","Men",-0.00815278542007731
+"Time","Men",-0.00829842923639126
+"Deal","Men",0.106218969265353
+"Quality","Men",0.0112592361030564
+"Clothing","Men",0.199808979671288
+"Clean","Men",0.0570719203921242
+"Cosmetics","Men",0.0284746597909602
+"Price","Men",-0.00798085239412841
+"Women","Men",0.171652443176073
+"Men","Men",1
+"Bedding","Men",-0.00463536274164303
+"Wedding","Men",0.0108716458890737
+"Watches","Men",0.0543044624405963
+"Furniture","Men",0.0161593108709351
+"Management","Bedding",-0.0229478989974592
+"Jewelry","Bedding",-0.033350088324788
+"Macy's Card","Bedding",0.0946509283154165
+"Returns","Bedding",-0.0113373008111276
+"Location","Bedding",0.162276012110578
+"Shoes","Bedding",-0.0321089654435538
+"Customer Service","Bedding",-0.00648204952857417
+"Associate","Bedding",-0.00771503357984039
+"Purse","Bedding",-0.0161110020417802
+"Delivery","Bedding",-0.0143287181084751
+"Website","Bedding",0.0197267494224497
+"Display","Bedding",0.0395356357790139
+"Fashion","Bedding",-0.0468122922266668
+"Dillard's","Bedding",-0.0283467384011726
+"Register","Bedding",0.158232793145858
+"Time","Bedding",0.0708721534702047
+"Deal","Bedding",0.0230084912208548
+"Quality","Bedding",0.186700716553257
+"Clothing","Bedding",-0.0264194129022767
+"Clean","Bedding",0.0967979523187638
+"Cosmetics","Bedding",-0.0275229606379617
+"Price","Bedding",0.0728891811733234
+"Women","Bedding",0.0863164208662271
+"Men","Bedding",-0.00463536274164303
+"Bedding","Bedding",1
+"Wedding","Bedding",-0.0236422629113718
+"Watches","Bedding",-0.0271567265756475
+"Furniture","Bedding",0.0629846782720319
+"Management","Wedding",-0.0245384088720909
+"Jewelry","Wedding",0.0101066193062641
+"Macy's Card","Wedding",-0.0465571276270892
+"Returns","Wedding",0.0475782966271056
+"Location","Wedding",0.00164625247686957
+"Shoes","Wedding",-0.00424015607138258
+"Customer Service","Wedding",0.0661113097705852
+"Associate","Wedding",-0.0426532125820012
+"Purse","Wedding",0.0409954246547334
+"Delivery","Wedding",-0.0153218359379054
+"Website","Wedding",-0.0301209262273129
+"Display","Wedding",-0.0224230320770576
+"Fashion","Wedding",0.097970030103077
+"Dillard's","Wedding",0.0465196401202182
+"Register","Wedding",0.120892146048444
+"Time","Wedding",-0.0419577695367411
+"Deal","Wedding",-0.0271049308854415
+"Quality","Wedding",-0.0344134690179687
+"Clothing","Wedding",0.0389943161877051
+"Clean","Wedding",0.0342326212955818
+"Cosmetics","Wedding",0.0268270129629349
+"Price","Wedding",-0.0438567667161242
+"Women","Wedding",0.00613041892664748
+"Men","Wedding",0.0108716458890737
+"Bedding","Wedding",-0.0236422629113718
+"Wedding","Wedding",1
+"Watches","Wedding",0.00367468177211237
+"Furniture","Wedding",-0.0351731172621351
+"Management","Watches",0.0237731131065763
+"Jewelry","Watches",0.143038261920878
+"Macy's Card","Watches",-0.00700306173072573
+"Returns","Watches",-0.0226652930401535
+"Location","Watches",-0.00719066521099269
+"Shoes","Watches",-0.0182703537039416
+"Customer Service","Watches",0.170962591034221
+"Associate","Watches",0.09302263909119
+"Purse","Watches",0.01365044834795
+"Delivery","Watches",-0.0175994536040156
+"Website","Watches",0.00298617613296709
+"Display","Watches",0.116683639844147
+"Fashion","Watches",0.112533446146456
+"Dillard's","Watches",-0.0348172881579355
+"Register","Watches",0.0628962693942956
+"Time","Watches",0.0255484213231122
+"Deal","Watches",0.0326661555174038
+"Quality","Watches",-0.0252154818370145
+"Clothing","Watches",-0.0170507271463826
+"Clean","Watches",-0.0248947314181422
+"Cosmetics","Watches",0.0508996038162774
+"Price","Watches",-0.0503761516681586
+"Women","Watches",-0.0296758048480048
+"Men","Watches",0.0543044624405963
+"Bedding","Watches",-0.0271567265756475
+"Wedding","Watches",0.00367468177211237
+"Watches","Watches",1
+"Furniture","Watches",0.00139710964635059
+"Management","Furniture",0.0756751030618289
+"Jewelry","Furniture",0.0299155151735947
+"Macy's Card","Furniture",0.100655524406553
+"Returns","Furniture",0.091423046962395
+"Location","Furniture",0.0274333550746903
+"Shoes","Furniture",-0.0180445496649137
+"Customer Service","Furniture",0.211232377027795
+"Associate","Furniture",0.049623638097116
+"Purse","Furniture",-0.00909016794391
+"Delivery","Furniture",0.476228047757174
+"Website","Furniture",0.192216334545497
+"Display","Furniture",-0.0100710133056947
+"Fashion","Furniture",0.0168187123589307
+"Dillard's","Furniture",-0.0421720694639573
+"Register","Furniture",-0.0120757583705541
+"Time","Furniture",0.0437053632926836
+"Deal","Furniture",0.0554302033168387
+"Quality","Furniture",0.334247004069644
+"Clothing","Furniture",-0.0219032444875521
+"Clean","Furniture",-0.0547576902247157
+"Cosmetics","Furniture",-0.0331755675171587
+"Price","Furniture",0.177604733585969
+"Women","Furniture",-0.0586351691766582
+"Men","Furniture",0.0161593108709351
+"Bedding","Furniture",0.0629846782720319
+"Wedding","Furniture",-0.0351731172621351
+"Watches","Furniture",0.00139710964635059
+"Furniture","Furniture",1

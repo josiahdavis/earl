@@ -1,9 +1,12 @@
 # CALCULATE INFORMATION DENSITY
-library(lsa)
+
+# Clear working space
+rm(list = ls())
+gc()
 
 # Load the Data
 loc <- '/Users/josiahdavis/Documents/GitHub/earl/'
-dr <- read.csv(paste(loc, 'yelp_review_Banking.csv', sep=""))
+dr <- read.csv(paste(loc, 'yelp_review_Macys.csv', sep=""))
 
 # Convert the relevant data into a corpus object with the tm package
 d <- Corpus(VectorSource(dr$text))
@@ -18,20 +21,15 @@ stopwords <- unlist(strsplit(stopwords, split=", "))
 
 # Remove stopwords (loop through a set of stopwords at a time)
 stopwords <- c(stopwords("english"), stopwords)
-
-for (i in 1:5){
-  if(i == 1){
-    start <- 1
-  }else{
-    start <- i * 1000
-  }
-  
-  if(i < 5){
-    end <- (i + 1) * 1000
-  }else{
-    end <- 5805
-  }
+for (i in 0:4){
+  start <- i*1000 + 1
+  end <- (i + 1)*1000
   d <- tm_map(d, removeWords, stopwords[start:end])
+  if(i == 4){
+    start <- end
+    end <- length(stopwords)
+    d <- tm_map(d, removeWords, stopwords[start:end])
+  }
 }
 
 # Remove punctuation
@@ -43,9 +41,8 @@ d <- tm_map(d, stripWhitespace)
 # Convert to a document term matrix (rows are documents, columns are words)
 dtm <- as.matrix(DocumentTermMatrix(d))
 
-# Calculate the entropy and words lenth
-dr$entropy <- entropy(dtm)
+# Calculate words length
 dr$wordsLength <- apply(dtm, MARGIN = 1, FUN = sum)
 
 # Write to csv
-write.csv(dr, paste(loc, 'yelp_review_Banking.csv', sep=""), row.names=FALSE)
+write.csv(dr, paste(loc, 'yelp_review_Macys.csv', sep=""), row.names=FALSE)
